@@ -12,8 +12,7 @@ $ firewall-cmd --list-ports
 ```
 ```
 $ setenforce 0
-$ systemctl start haproxy
-$ systemctl enable haproxy
+$ systemctl enable --now haproxy
 $ cat /var/log/audit/audit.log | audit2allow -M haproxy
 $ semodule -i haproxy.pp
 $ setenforce 1
