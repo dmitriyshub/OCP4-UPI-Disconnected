@@ -4,3 +4,5 @@
 
 #### [DHCP configuration](/dhcpd/README.md) 
 
+#### [HAProxy configuration](/haproxy/README.md) 
+
