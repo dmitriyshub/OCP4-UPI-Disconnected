@@ -13,6 +13,8 @@
 
 ![OCP Architecture](/images/OCP%20disconnected%20installation.jpg)
 
+### Steps:
+
 #### [Prerequisites](/prerequisites/README.md) 
 
 #### [DNS configuration](/named/README.md) 
@@ -24,3 +26,5 @@
 #### [KeepAlived configuration](/keepalived/README.md) 
 
 #### [Image-Registry](/image-registry/README.md)
+
+#### [OCP4 Installation](/ocp4-installation/README.md)

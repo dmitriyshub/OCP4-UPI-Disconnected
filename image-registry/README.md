@@ -94,3 +94,5 @@ $ curl -u root:redhat -k https://registry.dima.com:5000/v2/ocp/openshift4/tags/l
 $ skopeo inspect --authfile pull-secret-bundle.json  docker://registry.dima.com:5000/ocp/openshift4
 $ skopeo inspect --authfile pull-secret-bundle.json  docker://registry.dima.com:5000/ocp/openshift4:4.10.59-x86_64-cluster-csi-snapshot-controller-operator
 ```
+
+[Return to main](../README.md)

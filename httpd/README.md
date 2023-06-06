@@ -8,3 +8,5 @@ $ semanage fcontext -a -t httpd_sys_content_t "/var/www/html/(/.*)?"
 $ restorecon -R -v /var/www/html/pub
 $ sudo systemctl enable –now httpd
 ```
+
+[Return to main](../README.md)

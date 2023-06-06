@@ -65,3 +65,5 @@ $ sudo crictl ps
 $ journalctl -b -f -u release-image.service -u bootkube.service
 $ netstat -atunp | grep LISTEN
 ```
+
+[Return to main](../README.md)

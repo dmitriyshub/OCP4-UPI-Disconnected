@@ -52,3 +52,5 @@ $ scp <tools&packages> <username>@<internal-ip-address>:/path/to/dir/
 
 #### Create SSH Key (On internal bastion):
 $ ssh-keygen -t rsa -b 4096 -N '' -f .ssh/ocp4
+
+[Return to main](../README.md)
