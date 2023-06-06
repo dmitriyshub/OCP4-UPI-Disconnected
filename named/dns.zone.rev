@@ -1,0 +1,33 @@
+$TTL 86400
+@ IN SOA dns.dima.com. root.dima.com. (
+                        2023051501 ;Serial
+                        3600 ;Refresh
+                        1800 ;Retry
+                        604800 ;Expire
+                        86400 ;Minimum TTL
+)
+;Name Server Information
+@ IN NS dns.dima.com.
+dns     IN      A       192.168.1.2
+;Reverse lookup for Name Server
+2       IN PTR dns.dima.com.
+;PTR Record IP address to Hostname
+2       IN      PTR     ntp.dima.com.
+2       IN      PTR     registry.dima.com.
+2       IN      PTR     dima-bastion-ocp.dima.com.
+3       IN      PTR     dima-bastion-ext.dima.com.
+2       IN      PTR     haproxy-01.dima.com.
+3       IN      PTR     haproxy-02.dima.com.
+5       IN      PTR     ocp4.dima.com.
+5       IN      PTR     vip-01.dima.com.
+
+6       IN      PTR     bootstrap.dima.com.
+7       IN      PTR     master-01.dima.com.
+8       IN      PTR     master-02.dima.com.
+9       IN      PTR     master-03.dima.com.
+10      IN      PTR     worker-01.dima.com.
+11      IN      PTR     worker-02.dima.com.
+12      IN      PTR     worker-03.dima.com.
+
+5       IN      PTR     api.ocp4.dima.com.
+5       IN      PTR     api-int.ocp4.dima.com.

@@ -1,0 +1,32 @@
+$TTL 14400
+@  1D  IN  SOA dns.ocp4.dima.com. root.dima.com. (
+ 2023051500 ; serial
+ 3H ; refresh
+ 15 ; retry
+ 1w ; expire
+ 3h ; nxdomain ttl
+)
+  IN  NS     dns.dima.com.
+$ORIGIN dima.com.
+ntp                   IN   A   192.168.1.2
+dns	                  IN   A   192.168.1.2
+registry              IN   A   192.168.1.2
+dima-bastion-ocp      IN   A   192.168.1.2
+dima-bastion-ext      IN   A   192.168.1.1
+haproxy-01            IN   A   192.168.1.2
+haproxy-02            IN   A   192.168.1.3
+ocp4                  IN   A   192.168.1.5
+vip-01                IN   A   192.168.1.5
+
+bootstrap             IN   A   192.168.1.6
+master-01             IN   A   192.168.1.7
+master-02             IN   A   192.168.1.8
+master-03             IN   A   192.168.1.9
+worker-01             IN   A   192.168.1.10
+worker-02             IN   A   192.168.1.11
+worker-03             IN   A   192.168.1.12
+$ORIGIN ocp4.dima.com.
+api                   IN   A   192.168.1.5
+api-int               IN   A   192.168.1.5
+$ORIGIN apps.ocp4.dima.com.
+*                     IN   A   192.168.1.5
