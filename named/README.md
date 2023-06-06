@@ -1,4 +1,4 @@
-#### Configure DNS Server
+### Configure DNS Server
 - conf file path  `/etc/named.conf`
 - zone file path `/var/named/.`
 ```

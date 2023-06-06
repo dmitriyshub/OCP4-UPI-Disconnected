@@ -1,4 +1,4 @@
-#### Configure DHCP Server
+### Configure DHCP Server
 - conf file path  `/etc/dhcp/dhcpd.conf`
 ```
 $ sudo systemctl enable –now dhcpd
