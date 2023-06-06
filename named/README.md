@@ -13,5 +13,5 @@ $ firewall-cmd --reload
 $ dig api.ocp4.dima.com
 $ dig api-int.ocp4.dima.com
 $ dig whatever.apps.ocp4.dima.com
-... and so on ...
+# ... and so on ...
 ```
