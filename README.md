@@ -3,7 +3,7 @@
 - [4.10 Mirror versions](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/stable-4.10/)
 #### Environment:
 - Separate VLAN (Optional)
-- External Bastion
+- External Bastion (2 NIC)
 - Internal Bastion
 - 2 HAProxy Server (You can separate HAProxy from Bastion and create 2 HAProxy server)
 - CoreOS [OVA](https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.10/latest/rhcos-4.10.37-x86_64-vmware.x86_64.ova) or [ISO](https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.10/4.10.37/rhcos-4.10.37-x86_64-live.x86_64.iso) Template
@@ -27,4 +27,6 @@
 
 #### [Image-Registry](/image-registry/README.md)
 
-#### [OCP4 Installation](/ocp4-installation/README.md)
+#### [OCP4 Installation](/installation/README.md)
+
+#### [OCP4 Post Installation](/post-installation/README.md)
