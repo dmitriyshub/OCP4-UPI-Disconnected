@@ -22,3 +22,5 @@
 #### [HAProxy configuration](/haproxy/README.md) 
 
 #### [KeepAlived configuration](/keepalived/README.md) 
+
+#### [Image-Registry](/image-registry/README.md)
