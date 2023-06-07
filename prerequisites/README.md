@@ -42,6 +42,7 @@ $ rpm -ivh <packages>
 - `httpd-tools`
 - `haproxy`
 - `keepalived`
+- `scopeo`
 
 
 #### Move the tools to internal bastion
