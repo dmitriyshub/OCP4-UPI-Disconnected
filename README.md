@@ -4,7 +4,7 @@
 ___
 #### Environment:
 - Separate VLAN (Optional)
-- [RHEL 9.2](https://access.redhat.com/downloads/content/rhel) or [CentOS Stream 9](https://www.centos.org/download/) ISO (I use them for Bastions and HAProxy servers)
+- [RHEL](https://access.redhat.com/downloads/content/rhel) or [CentOS Stream 9](https://www.centos.org/download/) ISO (I use RHEL 9.2 for Bastions and HAProxy servers)
 - External Bastion (2 NIC's, one for your VLAN and another for internet access)
 - Internal Bastion
 - 2 HAProxy Servers with Keepalived (You can separate HAProxy from Bastion and create 2 HAProxy servers)
