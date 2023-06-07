@@ -1,7 +1,7 @@
 ### Prerequisites
 Choose the OCP version, get all the tools and packages to the external Bastion and move it to the internal Bastion, get the pull secret and install all the tools on the external and internal Bastion, create SSH key and TLS certificate
 ___
-#### Download the tools for the installation 
+#### Download the tools for the installation:
 
 - `oc-mirror` **only on external** (Optional step because we can use oc tool instead):
 ```
@@ -28,7 +28,7 @@ $ openshift-install completion bash > /etc/bash_completion.d/openshift-install
 $ source /etc/bash_completion.d/openshift-install (root and user)
 ```
 ___
-#### Download and Install Packages
+#### Download and Install Packages:
 ```
 $ yum install yum-utils
 $ yumdownloader --resolve <package1> && yumdownloader --resolve <package2>
@@ -36,7 +36,7 @@ $ scp <packages> <interna-bastionl-ip>:/path/to/dir/
 $ rpm -ivh <packages>
 ```
 
-#### Mandatory Packages
+#### Mandatory Packages:
 
 - `bind`
 - `dhcp-server`
@@ -46,7 +46,7 @@ $ rpm -ivh <packages>
 - `keepalived`
 - `scopeo`
 ___
-#### Move the tools to internal bastion
+#### Move the tools to internal bastion:
 
 ```
 $ scp <tools&packages> <username>@<internal-ip-address>:/path/to/dir/
