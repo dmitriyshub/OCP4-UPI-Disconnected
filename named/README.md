@@ -1,5 +1,5 @@
 ### Configure DNS Server
-- [conf file path](./named.conf)  `/etc/named.conf`
+- [configuration file path](./named.conf)  `/etc/named.conf`
 - [zone file](./dns.zone) path `/var/named/dns.zone`
 - [reverse zone](./dns.zone.rev) file path `/var/named/dns.zone.rev`
 ```
