@@ -1,8 +1,19 @@
 ### OCP4 Installation
-
+#### Create the install config file or copy from git
+```
+openshift-install create install-config
+```
+#### Create new directory (Important) and copy the install-config.yaml inside
+#### Create the Manifest from install-config.yaml
+```
+openshift-install create manifests --dir=/path/to/dir
+```
+#### Create the ignition files from the manifests
+```
+openshift-install create ignition-configs --dir=/path/to/dir
+```
 #### **OVA mode**:
 #### Encode the ignition files:
-
 ```
 $ base64 -w0 bootstrap.ign > bootstrap.b64 
 $ base64 -w0 master.ign > master.b64 
