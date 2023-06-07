@@ -1,6 +1,6 @@
 ### Configure HAProxy on Internal Bastion and HAProxy Server
 (You can separate HAProxy from Bastion and create 2 HAProxy servers)
-- conf file path  `/etc/haproxy/haproxy.cfg`
+- [configuration file](./haproxy.cfg) path  `/etc/haproxy/haproxy.cfg`
 ___
 #### Configure firewall:
 ```
