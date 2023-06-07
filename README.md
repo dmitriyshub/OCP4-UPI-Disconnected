@@ -27,6 +27,8 @@ ___
 
 #### [KeepAlived configuration](/keepalived/README.md) 
 
+#### [HTTPD configuration](/httpd/README.md) 
+
 #### [Image-Registry](/image-registry/README.md)
 
 #### [OCP4 Installation](/installation/README.md)
