@@ -1,5 +1,5 @@
 $TTL 14400
-@  1D  IN  SOA dns.ocp4.dima.com. root.dima.com. (
+@  1D  IN  SOA dns.dima.com. root.dima.com. (
  2023051500 ; serial
  3H ; refresh
  15 ; retry
