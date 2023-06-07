@@ -4,7 +4,8 @@
 ___
 #### Environment:
 - Separate VLAN (Optional)
-- External Bastion (2 NIC, one for your VLAN and another for internet access)
+- RHEL or CentOS ISO (I use them for bastions and haproxy servers)
+- External Bastion (2 NIC's, one for your VLAN and another for internet access)
 - Internal Bastion
 - 2 HAProxy Servers with Keepalived (You can separate HAProxy from Bastion and create 2 HAProxy servers)
 - CoreOS [OVA](https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.10/latest/rhcos-4.10.37-x86_64-vmware.x86_64.ova) or [ISO](https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/4.10/4.10.37/rhcos-4.10.37-x86_64-live.x86_64.iso) Template
