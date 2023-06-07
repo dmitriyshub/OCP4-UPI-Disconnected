@@ -1,6 +1,6 @@
 # Image Registry
 
-- Download RedHat [PullSecret](https://console.redhat.com/openshift/downloads)
+#### Download RedHat [PullSecret](https://console.redhat.com/openshift/downloads)
 
 - Check the PullSecret:
 ```
@@ -8,7 +8,14 @@ $ python3 -m json.tool pull-secret.txt > pull-secret.json
 $ cat pull-secret.json | jq . -c > pull-secret-oneline.json
 $ sudo podman pull --authfile ~/pull-secret-oneline.json registry.redhat.io/ubi8/ubi:latest 
 ```
-- Create the Registry Directories:
+#### Create the Registry Directories:
+- auth dir (registry username and password)
+- certs dir (for the registry tls certificate)
+- data dir (for the registry mirror data)
+- images dir (for the registry docker image)
+- tools dir (for the scripts install config file and ocp install tools)
+- secrets dir (for the pull secret and mirror registry)
+
 ```
 $ export REGISTRY_BASE="/opt/registry"
 $ mkdir -p ${REGISTRY_BASE}/{auth,certs,data,downloads}
@@ -33,14 +40,14 @@ $ sudo firewall-cmd --add-port=5000/tcp --zone=public --permanent
 $ sudo firewall-cmd --reload
 
 ```
-- Create the Docker Registry [shell script](opt/registry/downloads/tools/start_registry.sh):
+#### Create the Docker Registry [shell script](opt/registry/downloads/tools/start_registry.sh):
 ```
 sudo chmod a+x ${REGISTRY_BASE}/downloads/tools/start_registry.sh
 ./{REGISTRY_BASE}/downloads/tools/start_registry.sh
 curl -u <username>:<password> -k https://registry.dima.com:5000/v2/_catalog
 ```
 
-- Prepare the Env Variables:
+#### Prepare the Env Variables:
 ```
 $ export REGISTRY_BASE="/opt/registry"
 $ export LOCAL_REGISTRY='registry.dima.com:5000'
@@ -65,14 +72,14 @@ $ echo 'export LOCAL_SECRET_JSON="${REGISTRY_BASE}/downloads/secrets/pull-secret
 $ echo 'export RELEASE_NAME="ocp-release"' >> ${REGISTRY_BASE}/downloads/tools/env_ocp
 ```
 
-- Mirror Registry:
+#### Mirror Registry:
 ```
 $ oc adm -a ${LOCAL_SECRET_JSON} release mirror --from=quay.io/${PRODUCT_REPO}/${RELEASE_NAME}:${OCP_RELEASE} --to=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY} --to-release-image=${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE} 2>&1 | tee ${REGISTRY_BASE}/downloads/secrets/mirror-output.txt
 
 $ oc adm -a ${LOCAL_SECRET_JSON} release extract --command=openshift-install "${LOCAL_REGISTRY}/${LOCAL_REPOSITORY}:${OCP_RELEASE}"
 ```
 
-- Move Registry to Internal Server:
+#### Move Registry to Internal Server:
 ```
 $ podman stop my-registry
 $ podman save docker.io/library/registry:2 -o ${REGISTRY_BASE}/downloads/images/registry.tar
@@ -83,10 +90,10 @@ $ scp * dshtranv@192.168.1.2:/home/dshtranv/ocp/registry/
 $ cat ocp410-registry.tar.gz.part* > ocp410-registry.tar.gz
 $ md5sum ocp410-registry.tar.gz 
 ```
-- Extract the data and run the Registry
+- Extract the data and run the Registry with the same shell script
 
 
-- Registry Troubleshooting:
+#### Registry Troubleshooting:
 ```
 $ podman pull --authfile /opt/registry/downloads/secrets/pull-secret-bundle.json  registry.dima.com:5000/ocp/openshift4@sha256:3b228c6825f3d0eb34285084c538801d52fa24dce1db87293e8cc9accd83aaa1
 $q
