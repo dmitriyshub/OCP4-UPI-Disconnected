@@ -2,7 +2,7 @@
 (You can separate HAProxy from Bastion and create 2 HAProxy servers)
 - [configuration file](./haproxy.cfg) path  `/etc/haproxy/haproxy.cfg`
 ___
-#### Configure firewall:
+#### Configure Firewall:
 ```
 $ firewall-cmd --add-port 22623/tcp --permanent 
 $ firewall-cmd --add-port 6443/tcp --permanent 
@@ -13,7 +13,7 @@ $ firewall-cmd --reload
 $ firewall-cmd --list-ports
 ```
 ___
-#### Configure selinux:
+#### Start HAProxy and Configure Selinux:
 ```
 $ setenforce 0
 $ systemctl enable --now haproxy
