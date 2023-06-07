@@ -1,7 +1,7 @@
 ### Configure DNS Server
-- [conf file path](./dns.zone.rev)  `/etc/named.conf`
+- [conf file path](./named.conf)  `/etc/named.conf`
 - [zone file](./dns.zone) path `/var/named/dns.zone`
-- [reverse zone](./named.conf) file path `/var/named/dns.zone.rev`
+- [reverse zone](./dns.zone.rev) file path `/var/named/dns.zone.rev`
 ```
 $ chown named:named /var/named -R
 $ sudo systemctl enable –now named
