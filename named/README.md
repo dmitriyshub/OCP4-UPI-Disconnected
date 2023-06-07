@@ -10,7 +10,7 @@ $ sudo systemctl enable –now named
 $ firewall-cmd --permanent --add-service=dns 
 $ firewall-cmd --reload
 ```
-
+___
 #### Check the DNS Resolution:
 ```
 $ dig api.ocp4.dima.com
@@ -18,5 +18,5 @@ $ dig api-int.ocp4.dima.com
 $ dig whatever.apps.ocp4.dima.com
 # ... and so on ...
 ```
-
+___
 [Return to main](../README.md)
