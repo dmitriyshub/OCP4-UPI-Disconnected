@@ -26,3 +26,5 @@ $ oc-mirror --from /path/to/dir docker://registry.dima.com:5000
 $ oc apply -f ./oc-mirror-workspace/results-1686136072/imageContentSourcePolicy.yaml
 $ oc apply -f ./oc-mirror-workspace/results-1686136072/catalogSource-redhat-operator-index.yaml
 ```
+
+[Return to main](../README.md)

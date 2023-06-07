@@ -31,6 +31,9 @@ ___
 #### [OCP4 Installation](/installation/README.md)
 
 #### [OCP4 Post Installation](/post-installation/README.md)
+
+#### [Mirror Operators](/mirror/README.md)
+
 ___
 <span style="color:red">
 <b>IMPORTANT</b></span>
