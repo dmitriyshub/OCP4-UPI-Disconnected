@@ -37,6 +37,7 @@ ___
 
 - #### [Mirror Operators](/mirror/README.md)
 
+- #### [Gitlab Server Installation](/gitlab/README.md)
 ___
 <span style="color:red">
 <b>IMPORTANT</b></span>
