@@ -1,5 +1,5 @@
 ### Post installation
-
+___
 #### First Checks:
 ```
 $ oc adm top nodes
@@ -27,12 +27,12 @@ $ oc -n openshift-ingress  get pods -o wide
 $ oc get sc
 $ oc get network.config/cluster -o yaml
 ```
+___
+#### Local StorageClass and storage for image registry:
 
-#### Local StorageClass and storage for image registry
+- #### [Storage Class file](storage/storageClass.yaml)
 
-[Storage Class file](storage/storageClass.yaml)
-
-[Registry Storage file](storage/registryStorage.yaml)
+- #### [Registry Storage file](storage/registryStorage.yaml)
 ```
 $ oc apply -f class.yml
 $ oc apply -f registry-storage.yml
@@ -49,7 +49,7 @@ $ oc patch configs.imageregistry.operator.openshift.io cluster --type merge --pa
 $ oc patch configs.imageregistry.operator.openshift.io/cluster --patch '{"spec":{"defaultRoute":true}}' --type=merge
 $ docker login -u openshift -p $(oc whoami -t) <registry_ip>:<port>
 ```
-
+___
 #### Configure HTPasswd provider:
 ```
 $ htpasswd -c -B -b ~/DO280/labs/auth-provider/htpasswd admin redhat
@@ -78,7 +78,7 @@ watch oc get pods -n openshift-authentication
 ```
 oc delete secrets kubeadmin -n kube-system
 ```
-
+___
 #### Configure ingress TLS 
 
 - Create rootCA:
