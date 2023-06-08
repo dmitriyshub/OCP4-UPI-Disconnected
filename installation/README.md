@@ -68,9 +68,11 @@ ___
 #### CSR approval:
 ```
 $ oc get csr | grep -i pending
+```
+```
 $ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{"\n"}}{{end}}{{end}}' | xargs oc adm certificate approve
 ```
-- or 
+- **or** 
 ```
 $ for i in `oc get csr --no-headers | grep -i pending |  awk '{ print $1 }'`; do oc adm certificate approve $i; done
 ```
