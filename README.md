@@ -17,25 +17,25 @@ ___
 ___
 ### Steps:
 
-#### [Prerequisites](/prerequisites/README.md) 
+- #### [Prerequisites](/prerequisites/README.md) 
 
-#### [DNS configuration](/named/README.md) 
+- #### [DNS configuration](/named/README.md) 
 
-#### [DHCP configuration](/dhcpd/README.md) 
+- #### [DHCP configuration](/dhcpd/README.md) 
 
-#### [HAProxy configuration](/haproxy/README.md) 
+- #### [HAProxy configuration](/haproxy/README.md) 
 
-#### [KeepAlived configuration](/keepalived/README.md) 
+- #### [KeepAlived configuration](/keepalived/README.md) 
 
-#### [HTTPD configuration](/httpd/README.md) 
+- #### [HTTPD configuration](/httpd/README.md) 
 
-#### [Image-Registry](/image-registry/README.md)
+- #### [Image-Registry](/image-registry/README.md)
 
-#### [OCP4 Installation](/installation/README.md)
+- #### [OCP4 Installation](/installation/README.md)
 
-#### [OCP4 Post Installation](/post-installation/README.md)
+- #### [OCP4 Post Installation](/post-installation/README.md)
 
-#### [Mirror Operators](/mirror/README.md)
+- #### [Mirror Operators](/mirror/README.md)
 
 ___
 <span style="color:red">
