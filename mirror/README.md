@@ -6,6 +6,8 @@ $ wget https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/stable/o
 $ tar xvf oc-miiror.tar.gz
 $ chmod+x oc-mirror
 ```
+#### Authentication
+- Copy your pull secret to `{XDG_RUNTIME_DIR}/containers/auth.json` or `$HOME/.config/containers/auth`
 ___
 #### List Operator Catalog and choose one:
 ```
