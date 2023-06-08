@@ -36,4 +36,11 @@ $ oc apply -f ./oc-mirror-workspace/results-1686136072/imageContentSourcePolicy.
 $ oc apply -f ./oc-mirror-workspace/results-1686136072/catalogSource-redhat-operator-index.yaml
 ```
 ___
+#### Disable DefaultSources on OperatorHub:
+```
+oc patch OperatorHub cluster --type json \
+    -p '[{"op": "add", "path": "/spec/disableAllDefaultSources", "value": true}]'
+```
+
+
 [Return to main](../README.md)
