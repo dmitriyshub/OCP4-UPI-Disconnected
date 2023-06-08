@@ -72,6 +72,11 @@ spec:
 ```
 ```
 $ oc replace -f oauth.yaml
+watch oc get pods -n openshift-authentication
+```
+- delete kubeadmin **IMPORTANT**
+```
+oc delete secrets kubeadmin -n kube-system
 ```
 
 #### Configure ingress TLS 
