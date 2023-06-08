@@ -25,6 +25,10 @@ ___
 ```
 $ oc-mirror --from /path/to/dir docker://registry.dima.com:5000
 ```
+#### Change CatalogSource name (Optional)
+```
+$ oc edit CatalogSource  do380-catalog -n openshift-marketplace
+```
 ___
 #### Change the name in result yamls and apply them:
 ```
