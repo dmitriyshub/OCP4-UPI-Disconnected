@@ -1,5 +1,5 @@
-# Image Registry
-
+### Image Registry
+#### **For security reasons, you never put your secrets and private keys in git**, and I do it because it's not actual production files, and it's for learning/tutorial purposes only!
 #### Download RedHat [PullSecret](https://console.redhat.com/openshift/downloads)
 
 - Check the PullSecret:
@@ -25,7 +25,7 @@ $ tree /opt/registry/
 ```
 
 - Add to host file `127.0.0.1 registry.dima.com`
-- Create Registry TLS Certificate with [Answer file](opt/registry/certs/csr_answer.txt):
+#### Create Registry TLS Certificate with [Answer file](opt/registry/certs/csr_answer.txt):
 
 ```
 $ openssl req -newkey rsa:4096 -nodes -sha256 -keyout domain.key -x509 -days 3650 -extensions 'req_ext' -out domain.crt -config csr_answer.txt
